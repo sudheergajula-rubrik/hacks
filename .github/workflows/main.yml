@@ -20,3 +20,10 @@ jobs:
     - name: 'Running the integration test'
       run: |
         sh ./build.sh
+    - name: Start Jenkins Job
+      uses: appleboy/jenkins-action@master
+      with:
+        url: "http://sudheer-gajula-dev01.colo.rubrik.com"
+        user: "ubuntu"
+        token: 6a8c66f10913a18a11f6e8fa9931fe60
+        job: "Jarvis_Metadata_Upload"
